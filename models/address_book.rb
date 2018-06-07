@@ -6,7 +6,6 @@ require_relative 'entry'
     def initialize
       @entries = []
     end
-  end
 
   def add_entry(name, phone_number, email)
     # #9
