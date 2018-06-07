@@ -7,6 +7,19 @@ require_relative 'entry'
       @entries = []
     end
 
+  def remove_entry(name, phone_number, email)
+    index = index + 1
+    entries.each do |entry|
+
+      if name < entry.name
+        break
+      end
+      index-= 1
+    end
+
+    entries.remove(index, Entry.new(name, phone_number, email))
+  end
+
   def add_entry(name, phone_number, email)
     # #9
     index = 0
@@ -20,4 +33,6 @@ require_relative 'entry'
     # #11
     entries.insert(index, Entry.new(name, phone_number, email))
   end
+
+
 end
