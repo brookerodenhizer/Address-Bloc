@@ -8,6 +8,10 @@ require "csv"
       @entries = []
     end
 
+  def demolish
+    @entries = []
+  end
+
   def remove_entry(name, phone_number, email)
     delete_entry = nil
 
@@ -54,7 +58,7 @@ require "csv"
       end
     end
 
-    return nil 
+    return nil
   end
 
   def binary_search(name)
