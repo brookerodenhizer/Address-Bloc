@@ -46,6 +46,17 @@ require "csv"
     end
   end
 
+
+  def interative_search(name)
+    @entries.each do |entry|
+      if entry.name == name
+        return entry
+      end
+    end
+
+    return nil
+  end
+
   def binary_search(name)
 
     lower = 0
@@ -68,4 +79,5 @@ require "csv"
 
     return nil
   end
+
 end
